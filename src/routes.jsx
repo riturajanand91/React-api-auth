@@ -14,16 +14,18 @@ const SettingsComponent = lazy(() => import("./components/settings/Settings"));
 const Router = () => {
   return useRoutes([
     {
-      path: "/",
+      path: "/dashboard",
       element: <DashboardComponent />,
     },
     {
       path: "/profile",
       element: <ProfileComponent />,
+      exact: true,
     },
     {
       path: "/settings",
       element: <SettingsComponent />,
+      exact: true,
     },
     {
       path: "/logout",
@@ -32,6 +34,7 @@ const Router = () => {
     {
       path: "/login",
       element: <LoginComponent />,
+      exact: true,
     },
     {
       path: "/signup",

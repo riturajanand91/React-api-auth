@@ -25,16 +25,17 @@ const HeaderComponent = () => {
 
   /** User Account Menu */
   const [openUser, setOpenUser] = useState(null); //use A/c Menu
-  const handleOpen = (event: any) => {
+  const handleOpen = (event) => {
     setOpenUser(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = (e) => {
+    console.log(e);
     setOpenUser(null);
   };
 
   /** Nav Bar Menu */
   const [openNav, setOpenNav] = useState(null); //Main nav Menu
-  const handleOpenNav = (event: any) => {
+  const handleOpenNav = (event) => {
     setOpenNav(event.currentTarget);
   };
   const handleCloseNav = () => {

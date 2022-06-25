@@ -8,6 +8,9 @@ import { store } from "./redux/store/store";
 import { Provider } from "react-redux";
 import HttpInterceptor from "./interceptors/httpInterceptor";
 import ErrorInterceptor from "./interceptors/ErrorInterceptor";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +18,7 @@ root.render(
     <BrowserRouter>
       <Provider store={store}>
         <App />
+        <ToastContainer autoClose={2000} />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

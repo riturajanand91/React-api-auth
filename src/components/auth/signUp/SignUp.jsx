@@ -6,7 +6,7 @@ import ShieldIcon from "@mui/icons-material/Shield";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useFormik, Form, FormikProvider } from "formik";
 import * as Yup from "yup";
-import { registerUser } from "../../../redux/actions";
+import { registerUser } from "../../../redux/actions/index_old";
 
 const SignUpComponent = () => {
   const paperStyle = { padding: 30, height: "55vh", width: 400, margin: "260px auto" };

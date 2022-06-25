@@ -1,9 +1,10 @@
 import { httpClient } from "../httpClient/httpClient";
-
+import AuthService from "../services/auth";
 const HttpInterceptor = () => {
   httpClient.interceptors.request.use(
     (config) => {
-      const token = localStorage.getItem("token");
+      const token = AuthService.getLocalAccessToken();
+      console.log(token);
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
