@@ -31,7 +31,7 @@ const LogOutComponent = () => {
   };
 
   return (
-    <div className="logout">
+    <div className="logout align-items center">
       <h1>Are You Sure You Want To Logout?</h1>
       <Button
         variant="contained"

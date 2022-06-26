@@ -14,8 +14,6 @@ const INITIAL_STATE = user
   : { isLoggedIn: false, user: null, errors: null };
 
 const authReducer = (state = INITIAL_STATE, action) => {
-  console.log(action);
-  console.log(state);
   switch (action.type) {
     case REGISTER_SUCCESS:
       return {
@@ -60,84 +58,3 @@ const authReducer = (state = INITIAL_STATE, action) => {
   }
 };
 export default authReducer;
-
-// const authReducer = (state = INITIAL_STATE, action) => {
-//   switch (action.type) {
-//     // case LOGIN_PENDING:
-//     //   return {
-//     //     ...state,
-//     //     currentUser: {},
-//     //     isAuthenticated: false,
-//     //     loggedIn: false,
-//     //   };
-
-//     case LOGIN_SUCCESS:
-//       return {
-//         ...state,
-//         currentUser: action.payload,
-//         isAuthenticated: true,
-//         loggedIn: true,
-//       };
-//     case LOGIN_ERROR:
-//       return {
-//         ...state,
-//         currentUser: {},
-//         isAuthenticated: false,
-//         loggedIn: false,
-//         errors: {
-//           code: action.payload.response.status,
-//           message: action.payload.response.data,
-//           responseStatus: action.payload.response.statusText,
-//         },
-//       };
-
-//     case REGISTER_SUCCESS:
-//       return {
-//         ...state,
-//         currentUser: action.payload,
-//         isAuthenticated: true,
-//         loggedIn: true,
-//       };
-//     case REGISTER_ERROR:
-//       return {
-//         ...state,
-//         currentUser: {},
-//         isAuthenticated: false,
-//         loggedIn: false,
-//         errors: {
-//           code: action.payload.response.status,
-//           message: action.payload.response.data,
-//           responseStatus: action.payload.response.statusText,
-//         },
-//       };
-//     case LOGOUT_SUCCESS:
-//       return {
-//         ...INITIAL_STATE,
-//         currentUser: action.payload,
-//         isAuthenticated: false,
-//         loggedIn: false,
-//       };
-//     case LOGOUT_ERROR:
-//       return {
-//         // ...state,
-//         currentUser: {},
-//         isAuthenticated: false,
-//         loggedIn: false,
-//         errors: {
-//           code: action.payload.response.status,
-//           message: action.payload.response.data,
-//           responseStatus: action.payload.response.statusText,
-//         },
-//       };
-//     case CLEAR_DATA:
-//       return {
-//         ...state,
-//         currentUser: null,
-//         isAuthenticated: null,
-//         loggedIn: null,
-//       };
-//     default:
-//       return state;
-//   }
-// };
-// export default authReducer;

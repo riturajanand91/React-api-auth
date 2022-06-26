@@ -45,7 +45,7 @@ const LoginComponent = (props) => {
 
   const formik = useFormik({
     initialValues: {
-      email: "abdw@gmail.com",
+      email: "abd@gmail.com",
       password: "Admin@12345",
     },
     validationSchema: LoginSchema,
